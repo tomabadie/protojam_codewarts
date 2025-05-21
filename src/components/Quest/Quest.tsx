@@ -1,9 +1,5 @@
 const Quest = () => {
-  return (
-    <p>
-      Quest
-    </p>
-  )
-}
+	return <p>Quest</p>;
+};
 
-export default Quest
+export default Quest;
