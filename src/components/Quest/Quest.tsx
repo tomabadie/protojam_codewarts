@@ -1,8 +1,11 @@
+import PictureDiscover from "../PictureDiscover/PictureDiscover"
+
 const Quest = () => {
   return (
-    <p>
-      Quest
-    </p>
+    <section className="quest-section">
+      <PictureDiscover />
+      {/* <QuizWindow /> */}
+    </section>
   )
 }
 

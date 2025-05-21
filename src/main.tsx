@@ -17,7 +17,11 @@ const router = createBrowserRouter([
 			{
 				path: "/quest",
 				element: <Quest />,
-			}
+			},
+			{
+				path: "/quest/:level",
+				element: <Quest />,
+			},
 		]
 	}
 ]);
