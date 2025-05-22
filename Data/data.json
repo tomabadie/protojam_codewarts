@@ -1,0 +1,355 @@
+{
+	"levels": {
+		"easy": {
+			"html": {
+				"description": "HTML est le langage utilisé pour structurer le contenu d'une page web.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Quelle balise est utilisée pour créer un lien hypertexte ? <a _____='https://example.com'>Lien</a>",
+						"choices": ["href", "src", "link", "url"],
+						"answer": "href",
+						"code": "a1"
+					},
+					{
+						"title": "2eme année",
+						"question": "Quelle balise est utilisée pour afficher une image ? <img _____='image.jpg' alt='Texte'>",
+						"choices": ["src", "href", "link", "file"],
+						"answer": "src",
+						"code": "a2"
+					},
+					{
+						"title": "3eme année",
+						"question": "Comment insérer une liste pucée ? <_____> <li>Élément</li> </_____>",
+						"choices": ["ol", "ul", "div", "list"],
+						"answer": "ul",
+						"code": "a3"
+					},
+					{
+						"title": "4eme année",
+						"question": "Quelle balise est le parent direct des éléments <head> et <body> dans une page HTML ? <_____>",
+						"choices": ["html", "div", "section", "container"],
+						"answer": "html",
+						"code": "a4"
+					},
+
+					{
+						"title": "5eme année",
+						"question": "Quelle balise est utilisée pour les paragraphes ? <_____>Texte</_____>",
+						"choices": ["p", "h1", "span", "div"],
+						"answer": "p",
+						"code": "a5"
+					},
+					{
+						"title": "6eme année",
+						"question": "Quelle balise est utilisée pour un champ de texte dans un formulaire ? <_____ type='text'>",
+						"choices": ["input", "textarea", "form", "textbox"],
+						"answer": "input",
+						"code": "a6"
+					},
+					{
+						"title": "7eme année",
+						"question": "Comment ajouter un bouton en HTML ? <_____ type='button'>Cliquez ici</_____>",
+						"choices": ["button", "input", "clickable", "action"],
+						"answer": "button",
+						"code": "a7"
+					}
+				]
+			},
+			"css": {
+				"description": "CSS permet de styliser une page web en définissant l'apparence des éléments HTML.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Quelle propriété permet de changer la couleur du texte ? { _____: red; }",
+						"choices": ["background-color", "text-color", "color", "red"],
+						"answer": "color",
+						"code": "a8"
+					},
+					{
+						"title": "2eme année",
+						"question": "Comment rendre un texte centré ? { text-align: _____; }",
+						"choices": ["center", "left", "right", "justify"],
+						"answer": "center",
+						"code": "a9"
+					},
+					{
+						"title": "3eme année",
+						"question": "Quelle propriété change la taille du texte ? { _____: 16px; }",
+						"choices": ["size", "font-size", "text-size", "scale"],
+						"answer": "font-size",
+						"code": "a10"
+					},
+					{
+						"title": "4eme année",
+						"question": "Comment ajouter un arrière-plan ? { _____: black; }",
+						"choices": ["behind", "color", "background", "none"],
+						"answer": "background",
+						"code": "a11"
+					},
+					{
+						"title": "5eme année",
+						"question": "Comment ajouter une bordure solide ? { border: 1px _____ black; }",
+						"choices": ["none", "dashed", "solid", "double"],
+						"answer": "solid",
+						"code": "a12"
+					},
+					{
+						"title": "6eme année",
+						"question": "Quelle propriété permet de modifier la police du texte ? { _____: arial; }",
+						"choices": [
+							"text-size",
+							"Comic Sans",
+							"Times New Roman",
+							"font-family"
+						],
+						"answer": "font-family",
+						"code": "a13"
+					},
+					{
+						"title": "7eme année",
+						"question": "Comment rendre un élément complètement transparent ? { opacity: _____; }",
+						"choices": ["0", "1", "0.5", "none"],
+						"answer": "0",
+						"code": "a14"
+					}
+				]
+			}
+		},
+		"intermediate": {
+			"css": {
+				"description": "CSS permet de styliser une page web en définissant l'apparence des éléments HTML.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Quelle propriété permet d’ajouter un espace interne dans un élément ? { _____: 10px; }",
+						"choices": ["padding", "margin", "border", "spacing"],
+						"answer": "padding",
+						"code": "b1"
+					},
+					{
+						"title": "2eme année",
+						"question": "Quelle propriété CSS permet d'ajouter une ombre à un texte ? { _____: 2px 2px gray; }",
+						"choices": ["text-shadow", "box-shadow", "shadow", "filter"],
+						"answer": "text-shadow",
+						"code": "b2"
+					},
+					{
+						"title": "3eme année",
+						"question": "Quelle propriété permet d’arrondir les bords d’un élément ? { border-radius: _____px; }",
+						"choices": ["5", "10", "radius", "round"],
+						"answer": "5",
+						"code": "b3"
+					},
+					{
+						"title": "4eme année",
+						"question": "Comment rendre un élément invisible ? { display: _____; }",
+						"choices": ["none", "hidden", "block", "invisible"],
+						"answer": "none",
+						"code": "b4"
+					},
+					{
+						"title": "5eme année",
+						"question": "Quelle unité permet de créer une taille flexible ? { width: 50_____ ; }",
+						"choices": ["%", "px", "vw", "em"],
+						"answer": "%",
+						"code": "b5"
+					},
+					{
+						"title": "6eme année",
+						"question": "Quelle propriété permet d’ajouter un espace interne dans un élément ? { _____: 10px; }",
+						"choices": ["padding", "margin", "border", "spacing"],
+						"answer": "padding",
+						"code": "b6"
+					},
+					{
+						"title": "7eme année",
+						"question": "Quelle propriété CSS permet de créer un effet de flou sur un élément ? { filter: _____(5px); }",
+						"choices": ["contrast", "opacity", "shadow", "blur"],
+						"answer": "blur",
+						"code": "b7"
+					}
+				]
+			},
+			"javascript": {
+				"description": "JavaScript est un langage qui permet d'ajouter de l'interactivité aux pages web.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Comment déclarer une variable en JavaScript ? _____ x = 10;",
+						"choices": ["function", "let", "return", "state"],
+						"answer": "let",
+						"code": "b8"
+					},
+					{
+						"title": "2eme année",
+						"question": "Quelle méthode affiche un message dans la console ? console._____('Hello');",
+						"choices": ["log", "print", "write", "display"],
+						"answer": "log",
+						"code": "b9"
+					},
+					{
+						"title": "3eme année",
+						"question": "Comment récupérer un élément par son ID en JavaScript ? document.getElement_____('id');",
+						"choices": ["ByClass", "ByName", "ById", "ByTag"],
+						"answer": "ById",
+						"code": "b10"
+					},
+					{
+						"title": "4eme année",
+						"question": "Comment créer une fonction en JavaScript ? function _____() { ... }",
+						"choices": [
+							"startFunction",
+							"newFunction",
+							"createFunction",
+							"myFunction"
+						],
+						"answer": "myFunction",
+						"code": "b11"
+					},
+					{
+						"title": "5eme année",
+						"question": "Comment ajouter un événement 'click' sur un bouton en JavaScript ? button._____('click', function() {...})",
+						"choices": [
+							"addEventListener",
+							"onClick",
+							"clickEvent",
+							"setClick"
+						],
+						"answer": "addEventListener",
+						"code": "b12"
+					},
+					{
+						"title": "6eme année",
+						"question": "Quelle méthode permet de diviser une chaîne de caractères en un tableau de sous-chaînes ? string._____(',');",
+						"choices": ["concat", "join", "spit", "slice"],
+						"answer": "split",
+						"code": "b13"
+					},
+					{
+						"title": "7eme année",
+						"question": "Quelle méthode permet de supprimer le dernier élément d'un tableau en JavaScript ? array._____();",
+						"choices": ["pop", "shift", "splice", "remove"],
+						"answer": "pop",
+						"code": "b14"
+					}
+				]
+			}
+		},
+		"expert": {
+			"javascript": {
+				"description": "JavaScript est un langage qui permet d'ajouter de l'interactivité aux pages web.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Quelle méthode permet de trier un tableau ? array._____();",
+						"choices": ["map", "filter", "sort", "reverse"],
+						"answer": "sort",
+						"code": "c1"
+					},
+					{
+						"title": "2eme année",
+						"question": "Comment convertir une chaîne en nombre entier en JavaScript ? parse_____('42');",
+						"choices": ["Number", "Int", "Float", "Integer"],
+						"answer": "Int",
+						"code": "c2"
+					},
+					{
+						"title": "3eme année",
+						"question": "Quelle méthode permet de filtrer les éléments d'un tableau ? array._____((item) => item > 10);",
+						"choices": ["reduce", "map", "find", "filter"],
+						"answer": "filter",
+						"code": "c3"
+					},
+					{
+						"title": "4eme année",
+						"question": "Comment vérifier si une variable est un tableau ? Array._____(variable);",
+						"choices": ["isArray", "checkArray", "validateArray", "isType"],
+						"answer": "isArray",
+						"code": "c4"
+					},
+					{
+						"title": "5eme année",
+						"question": "Quelle syntaxe permet d'importer un module en JavaScript ? _____ { myFunction } from './module.js';",
+						"choices": ["export", "require", "import", "fetch"],
+						"answer": "import",
+						"code": "c5"
+					},
+					{
+						"title": "6eme année",
+						"question": "Quelle méthode permet d'attendre la résolution d'une promesse ? await _____();",
+						"choices": ["fetchData", "resolve", "asyncCall", "wait"],
+						"answer": "fetchData",
+						"code": "c6"
+					},
+					{
+						"title": "7eme année",
+						"question": "Quelle méthode permet de supprimer le premier élément d'un tableau en JavaScript ? array._____();",
+						"choices": ["shift", "pop", "splice", "remove"],
+						"answer": "shift",
+						"code": "c7"
+					}
+				]
+			},
+			"react": {
+				"description": "React est une bibliothèque JavaScript pour créer des interfaces utilisateur interactives.",
+				"questions": [
+					{
+						"title": "1ere année",
+						"question": "Comment définir un état dans un composant React ? const [count, _____] = useState(0);",
+						"choices": [
+							"updateCount",
+							"setCount",
+							"changeCount",
+							"modifyCount"
+						],
+						"answer": "setCount",
+						"code": "c8"
+					},
+					{
+						"title": "2eme année",
+						"question": "Quelle méthode permet de parcourir un tableau et retourner un nouvel élément JSX en React ? array._____((item) => <Component key={item.id} {...item} />);",
+						"choices": ["map", "forEach", "filter", "reduce"],
+						"answer": "map",
+						"code": "c9"
+					},
+					{
+						"title": "3eme année",
+						"question": "Comment déclencher un effet secondaire après un rendu en React ? use_____(() => { console.log('Effect'); }, []);",
+						"choices": ["Effect", "State", "Reducer", "Memo"],
+						"answer": "Effect",
+						"code": "c10"
+					},
+					{
+						"title": "4eme année",
+						"question": "Quelle méthode permet de passer des données d’un composant parent à enfant ? <ChildComponent _____={data} />",
+						"choices": ["props", "state", "context", "redux"],
+						"answer": "props",
+						"code": "c11"
+					},
+					{
+						"title": "5eme année",
+						"question": "Quelle bibliothèque permet de gérer globalement l’état en React ? _____({ value });",
+						"choices": ["redux", "useState", "context", "mobx"],
+						"answer": "context",
+						"code": "c12"
+					},
+					{
+						"title": "6eme année",
+						"question": "Comment éviter les recréations inutiles de fonctions dans un composant React ? React._____(() => { handleClick(); }, [deps]);",
+						"choices": ["useCallback", "useMemo", "useEffect", "optimize"],
+						"answer": "useCallback",
+						"code": "c13"
+					},
+					{
+						"title": "7eme année",
+						"question": "Quelle méthode permet de stocker une valeur et la mettre à jour dynamiquement dans un composant React ? const [react, setReact] = _____<ReactProp[]>([]);;",
+						"choices": ["useMemo", "useState", "useEffect", "useReducer"],
+						"answer": "useState",
+						"code": "c14"
+					}
+				]
+			}
+		}
+	}
+}

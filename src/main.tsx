@@ -17,9 +17,9 @@ const router = createBrowserRouter([
 			{
 				path: "/quest",
 				element: <Quest />,
-			}
-		]
-	}
+			},
+		],
+	},
 ]);
 
 const rootElement = document.getElementById("root");
