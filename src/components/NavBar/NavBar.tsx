@@ -1,5 +1,5 @@
-import "../../style/Navbar.css";
 import { Link } from "react-router";
+import "./Navbar.css";
 
 const Navbar = () => {
 	return (
@@ -12,7 +12,7 @@ const Navbar = () => {
 						</Link>
 					</ul>
 					<ul>
-						<Link to="/Quest">
+						<Link to="/quest/">
 							<li>Sortilèges</li>
 						</Link>
 					</ul>

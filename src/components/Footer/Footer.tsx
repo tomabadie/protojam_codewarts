@@ -1,7 +1,7 @@
 import instagram from "../../assets/instagram.png";
 import twitter from "../../assets/twitter.png";
 import youtube from "../../assets/youtube.png";
-import "../../style/Footer.css";
+import "./Footer.css";
 
 const Footer = () => {
 	return (

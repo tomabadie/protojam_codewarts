@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App.tsx";
 
+import Error404 from "./components/Error404/Error404.tsx";
+import Home from "./components/Home/Home.tsx";
 import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
-import Error404 from "./components/Home/Error404.tsx";
-import Home from "./components/Home/Home.tsx";
 
 const router = createBrowserRouter([
 	{
