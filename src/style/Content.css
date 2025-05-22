@@ -1,0 +1,37 @@
+.content {
+	text-align: center;
+}
+
+.content a {
+	text-decoration: none;
+}
+
+.content-title {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.content-info {
+	line-height: 1.6;
+	font-size: 1.3rem;
+	border-radius: 3px;
+	margin: 0 auto;
+	margin-top: 50px;
+	background-color: #202020b6;
+	width: 600px;
+	padding: 25px 35px;
+	padding-bottom: 30px;
+}
+
+.content-btn {
+	border-style: none;
+	background-color: #181818;
+	color: white;
+	padding: 20px 40px;
+	border-radius: 16px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}

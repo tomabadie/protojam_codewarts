@@ -1,0 +1,16 @@
+.footer {
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	gap: 30px;
+	list-style: none;
+}

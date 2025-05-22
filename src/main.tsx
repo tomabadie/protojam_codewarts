@@ -2,9 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App.tsx";
-import Home from "./components/Home/Home.tsx";
+
 import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
+import Error404 from "./components/Home/Error404.tsx";
+import HomePage from "./components/Home/HomePage.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -12,11 +14,15 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "/",
-				element: <Home />,
+				element: <HomePage />,
 			},
 			{
 				path: "/quest",
 				element: <Quest />,
+			},
+			{
+				path: "/404",
+				element: <Error404 />,
 			},
 		],
 	},
