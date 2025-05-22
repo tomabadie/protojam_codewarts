@@ -5,9 +5,9 @@ import App from "./App.tsx";
 
 import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
-import Error404 from "./components/Home/Error404.tsx";
+import Error404 from "./components/Error404/Error404.tsx";
 import Home from "./components/Home/Home.tsx";
-import EasterEgg from "./components/Home/EasterEgg.tsx";
+import EasterEgg from "./components/EasterEgg/EasterEgg.tsx";
 
 const router = createBrowserRouter([
 	{

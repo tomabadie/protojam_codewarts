@@ -1,5 +1,5 @@
-import "../../style/Navbar.css";
 import { Link } from "react-router";
+import "./Navbar.css";
 
 const Navbar = () => {
 	return (
@@ -8,12 +8,12 @@ const Navbar = () => {
 				<div className="navbar-pages">
 					<ul>
 						<Link to="/">
-							<li>HOME</li>
+							<li>Accueil</li>
 						</Link>
 					</ul>
 					<ul>
-						<Link to="/Quest">
-							<li>QUEST</li>
+						<Link to="/quest/">
+							<li>Sortilèges</li>
 						</Link>
 					</ul>
 				</div>

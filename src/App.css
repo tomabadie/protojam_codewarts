@@ -5,11 +5,14 @@
 }
 @font-face {
 	font-family: "Lumos";
-	src: local("Lumos"), url("/public/Fonts/LUMOS.TTF") format("truetype");
+	src: local("Lumos"), url("./assets/fonts/lumos.ttf") format("truetype");
 }
-
+@font-face {
+	font-family: "dum1";
+	src: local("dum1"), url("./assets/fonts/dum1.ttf") format("truetype");
+}
 :root {
-	--font-family-body: "", sans-serif;
+	--font-family-body: "dum1", sans-serif;
 	--font-family-title: "Lumos", serif;
 }
 body {
@@ -24,6 +27,13 @@ body {
 	h6 {
 		font-family: var(--font-family-title);
 	}
+	cursor: url("/cursors/harry_potter_wand.cur"), auto;
+	.easyquest,
+	.mediumquest,
+	.expertquest {
+		cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_1482.png"),
+			auto;
+	}
 }
 
 #root {
@@ -32,7 +42,7 @@ body {
 
 main {
 	min-height: calc(100vh - 104px - 36px);
-	background-image: url("../../public/img/licorne_cw.png");
+	background-image: url("/img/licorne_cw.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

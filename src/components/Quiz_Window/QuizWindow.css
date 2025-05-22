@@ -1,0 +1,153 @@
+.quiz-window {
+	padding: 2rem;
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.section-description {
+	background-color: #f3f3f3;
+	padding: 1rem;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+}
+
+.card {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 1rem;
+	transition: all 0.3s ease;
+	margin-bottom: .5rem;
+}
+
+.card.inactive {
+	background-color: #fafafa;
+	padding: 0.5rem;
+	overflow: hidden;
+}
+
+.card.active {
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card.validated {
+	border-left: 6px solid #4caf50;
+}
+
+h4 {
+	margin-top: 0;
+}
+
+.choices {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin: 1rem 0;
+}
+
+.choice-btn {
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	transition: background-color 0.3s;
+}
+
+.choice-btn:hover:not(:disabled):not(.correct):not(.wrong) {
+	background-color: #ddd;
+}
+
+.choice-btn.correct,
+.choice-btn.correct:hover {
+	background-color: #4caf50;
+	color: white;
+	border-color: #4caf50;
+	transition: none;
+}
+
+.choice-btn.wrong,
+.choice-btn.wrong:hover {
+	background-color: #f44336;
+	color: white;
+	border-color: #f44336;
+	transition: none;
+}
+
+.choice-btn:disabled {
+	cursor: default;
+	opacity: 1;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.code-input {
+	width: 200px;
+	padding: 0.5rem;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-family: monospace;
+}
+
+.next-btn {
+	padding: 0.5rem 1rem;
+	background-color: #2196f3;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.next-btn:disabled {
+	background-color: #90caf9;
+	cursor: not-allowed;
+}
+
+.collapsed {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-left: 1rem;
+	justify-content: center;
+	position: relative;
+}
+
+.code-label {
+	font-weight: bold;
+	margin-right: 0.5rem;
+}
+
+.expand-bar {
+	position: absolute;
+	right: 0.5rem;
+	height: 36px;
+	width: 36px;
+	background-color: white;
+	color: black;
+	font-size: 1.5rem;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.expand-bar::before {
+	content: "+";
+	display: block;
+}
+
+.expand-bar:hover {
+	background-color: #04da90;
+}

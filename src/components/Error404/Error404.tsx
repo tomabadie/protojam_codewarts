@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import looser from "../../assets/404Loosers.png";
-import "../../style/Error404.css";
+import "./Error404.css";
 
 const Error404 = () => {
 	const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Error404 = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			navigate("/");
-		}, 3000);
+		}, 5000);
 	});
 
 	return (

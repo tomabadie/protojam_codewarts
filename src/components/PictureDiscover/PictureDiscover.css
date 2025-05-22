@@ -1,13 +1,43 @@
 .picture-discover {
-	display: grid;
-	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid rgb(105, 160, 23);
 
 	h2 {
-		justify-self: center;
+		padding: 4px;
+		border: 1px solid orange;
 	}
 
-	img {
-		justify-self: center;
-		height: 500px;
+	.img-container {
+		height: 476px;
+		width: 320px;
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(28, 1fr);
+		border: 1px solid red;
+
+		.secret-img {
+			height: 100%;
+			width: 100%;
+			grid-area: 1 / 1 / 29 / 21;
+			object-fit: cover;
+		}
+
+		.filter-1 .filter-2 {
+			display: none;
+		}
+
+		.filter-3 {
+			display: none;
+		}
+
+		.filter-4 {
+			display: none;
+		}
+
+		.filter-5 {
+			display: none;
+		}
 	}
 }

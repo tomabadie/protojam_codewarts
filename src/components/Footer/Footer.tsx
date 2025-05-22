@@ -2,7 +2,7 @@ import instagram from "../../assets/instagram.png";
 import twitter from "../../assets/twitter.png";
 import youtube from "../../assets/youtube.png";
 import github from "../../assets/github.png";
-import "../../style/Footer.css";
+import "../Footer/Footer.css";
 
 const Footer = () => {
 	return (
@@ -20,7 +20,7 @@ const Footer = () => {
 						</a>
 					</li>
 					<li className="logo-youtube">
-						<a href="https://www.youtube.com/watch?v=ud5iNW3Wn8I">
+						<a href="https://www.youtube.com/@WildCodeSchool4ever">
 							<img src={youtube} alt="logo de youtbe" />
 						</a>
 					</li>
