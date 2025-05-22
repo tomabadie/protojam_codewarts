@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "./PictureDiscover.css";
 import { secretImg } from "./pictureDiscoverData";
-import type { LevelProps, SecretImgProps } from "./pictureDiscoverType";
+import type { LevelProps, PictureDiscoverProps, SecretImgProps } from "./pictureDiscoverType";
 
 const generateFilterArray = () => {
   const randNumb = [];
@@ -39,7 +39,7 @@ const generateRandomColor = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-const PictureDiscover = () => {
+const PictureDiscover = ({ activeIndex }: PictureDiscoverProps) => {
   const { level } = useParams();
 
   const validateLevel = (lvl: string) => {
@@ -83,9 +83,13 @@ const PictureDiscover = () => {
                 group.map((coord: [number, number]) => {
                   return (
                     <div
-                      className={`filter-${groupIndex + 1}`}
+                      className={`filter-${groupIndex + 1} ${(groupIndex) < activeIndex && "revealed-group"}`}
                       key={`${coord[0]}-${coord[1]}`}
-                      style={{ gridRow: coord[0], gridColumn: coord[1], backgroundColor: groupColors[groupIndex] }}
+                      style={{
+                        gridRow: coord[0],
+                        gridColumn: coord[1],
+                        backgroundColor: groupColors[groupIndex],
+                      }}
                     />)
                 }))
             })

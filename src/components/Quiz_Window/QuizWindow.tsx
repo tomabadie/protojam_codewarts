@@ -16,11 +16,14 @@ interface Section {
 	description: string;
 	questions: Question[];
 }
+interface QuizWindowProps {
+	activeIndex: number;
+	setActiveIndex: (value: number) => void;
+}
 
-const QuizWindow = () => {
+const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 	const { level } = useParams() as { level: keyof typeof data.levels };
 	const [sections, setSections] = useState<[string, Section][]>([]);
-	const [activeIndex, setActiveIndex] = useState(0);
 	const [answered, setAnswered] = useState<Record<number, boolean>>({});
 	const [codes, setCodes] = useState<Record<number, string>>({});
 	const [selectedChoices, setSelectedChoices] = useState<
