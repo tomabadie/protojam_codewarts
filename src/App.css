@@ -12,3 +12,7 @@ body {
 #root {
 	height: 100vh;
 }
+
+main {
+	min-height: calc(100vh - 104px - 36px);
+}
