@@ -1,0 +1,13 @@
+.picture-discover {
+	display: grid;
+	border: 1px solid red;
+
+	h2 {
+		justify-self: center;
+	}
+
+	img {
+		justify-self: center;
+		height: 500px;
+	}
+}
