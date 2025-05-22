@@ -39,19 +39,7 @@
 			object-fit: cover;
 		}
 
-		.filter-1 .filter-2 {
-			display: none;
-		}
-
-		.filter-3 {
-			display: none;
-		}
-
-		.filter-4 {
-			display: none;
-		}
-
-		.filter-5 {
+		.revealed-group {
 			display: none;
 		}
 	}
