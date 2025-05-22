@@ -1,9 +1,6 @@
-export type LevelProps =
-  | "easy"
-  | "intermediate"
-  | "expert";
+export type LevelProps = "easy" | "intermediate" | "expert";
 
 export interface SecretImgProps {
-  name: string;
-  imgUrl: string;
-};
+	name: string;
+	imgUrl: string;
+}

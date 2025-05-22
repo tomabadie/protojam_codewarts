@@ -1,12 +1,12 @@
-import PictureDiscover from "../PictureDiscover/PictureDiscover"
+import PictureDiscover from "../PictureDiscover/PictureDiscover";
 
 const Quest = () => {
-  return (
-    <section className="quest-section">
-      <PictureDiscover />
-      {/* <QuizWindow /> */}
-    </section>
-  )
-}
+	return (
+		<section className="quest-section">
+			<PictureDiscover />
+			{/* <QuizWindow /> */}
+		</section>
+	);
+};
 
-export default Quest
+export default Quest;
