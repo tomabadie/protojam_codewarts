@@ -7,6 +7,7 @@ import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
 import Error404 from "./components/Home/Error404.tsx";
 import Home from "./components/Home/Home.tsx";
+import EasterEgg from "./components/Home/EasterEgg.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
 			{
 				path: "/404",
 				element: <Error404 />,
+			},
+			{
+				path: "/easter-egg",
+				element: <EasterEgg />,
 			},
 			{
 				path: "*",

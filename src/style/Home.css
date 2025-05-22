@@ -29,3 +29,11 @@
 	cursor: pointer;
 	border-style: none;
 }
+
+.oeuf {
+	display: flex;
+	position: absolute;
+	width: 32px;
+	right: 84%;
+	bottom: 61%;
+}
