@@ -1,5 +1,19 @@
+import logo from "../../assets/logo.png";
+import { Link } from "react-router";
+import Navbar from "./Navbar";
+import "../../style/Header.css";
+
 const Header = () => {
-	return <p>Header</p>;
+	return (
+		<div className="header">
+			<div className="logo-1">
+				<Link to="404">
+					<img src={logo} alt="logo" />
+				</Link>
+			</div>
+			<Navbar />
+		</div>
+	);
 };
 
 export default Header;

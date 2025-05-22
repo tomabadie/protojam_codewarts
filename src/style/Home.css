@@ -1,0 +1,29 @@
+.home-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.home-section h1 {
+	margin: 20px;
+	padding: 20px;
+}
+
+.home-section p {
+	font-size: 1.3rem;
+	width: 600px;
+	padding: 20px 35px;
+	border-radius: 4px;
+	background-color: #202020b6;
+}
+
+.home-btn {
+	margin-top: 40%;
+	padding: 20px 40px;
+	font-size: 20px;
+	border-radius: 16px;
+	background-color: #181818;
+	color: white;
+	cursor: pointer;
+	border-style: none;
+}
