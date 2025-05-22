@@ -3,27 +3,41 @@ import "../../style/Home.css";
 
 function Home() {
 	return (
-		<div className="home-section">
-			<h1>Vos début avec CodeWarts</h1>
+		<section className="home-section">
+			<h1>Bienvenue à CodeWarts !</h1>
 
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorum
-				suscipit magnam ea asperiores esse omnis incidunt quaerat reprehenderit,
-				tenetur odio ut saepe maiores repellendus, distinctio dolorem. Ab
-				corporis, nihil nulla vero maiores quam ad sed ipsam tempora quas
-				cupiditate dicta corrupti eaque quibusdam velit dolorum inventore
-				suscipit et officiis. Lorem ipsum dolor sit amet consectetur,
-				adipisicing elit. Porro ipsum saepe officiis quis laborum beatae maxime
-				ad quibusdam impedit inventore, enim cum! Nulla esse tenetur laudantium
-				rerum iusto, sit tempora.
+				Sorciers, sorcières et novices du code, préparez-vous à un voyage
+				ensorcelé dans le monde mystérieux du développement web !
+				<br />
+				<br />
+				Ici, pas de potions magiques ni de cours de défense contre les forces du
+				mal, mais une initiation HTML, CSS , JavaScript et React qui
+				transformera ton clavier en une véritable baguette magique.
+				<br />
+				<br />
+				Le défi ? Réponds correctement aux 14 énigmes de chaque niveau et
+				dévoile progressivement une image mystère floutée (un vrai sortilège !)
+				Progresse à travers les trois niveaux pour devenir un Grand Mage du
+				Code.
+				<br />
+				<br />À qui s’adresse CodeWarts ? Que tu sois un jeune apprenti ou un
+				grand sorcier curieux, ce jeu est fait pour tous ceux qui souhaitent
+				s'initier au monde magique du développement web. Grâce à une expérience
+				ludique et immersive, apprendre le code devient aussi captivant qu'un
+				duel de sorciers !
+				<br />
+				<br />
+				Alors, oseras-tu relever le défi ? Prépare ton grimoire et clique pour
+				commencer l'aventure !
 			</p>
 
-			<Link to="/Quest">
+			<Link to="/quest/easy">
 				<button className="home-btn" type="button">
-					go to quest
+					Lance le Sort !
 				</button>
 			</Link>
-		</div>
+		</section>
 	);
 }
 

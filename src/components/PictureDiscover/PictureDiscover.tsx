@@ -45,11 +45,11 @@ const PictureDiscover = () => {
   const { level } = useParams();
 
   const validateLevel = (lvl: string) => {
-    return ["easy", "intermediate", "expert"].includes(lvl)
+    return ["easy", "intermediate", "expert"].includes(lvl);
   };
 
   if (!level || !validateLevel(level)) {
-    return <p>Tom Elvis Jedusor a encore tout cassé !</p>
+    return <p>Tom Elvis Jedusor a encore tout cassé !</p>;
   }
 
   const lvlImg: SecretImgProps = secretImg[level as LevelProps];
@@ -90,4 +90,4 @@ const PictureDiscover = () => {
   )
 }
 
-export default PictureDiscover
+export default PictureDiscover;

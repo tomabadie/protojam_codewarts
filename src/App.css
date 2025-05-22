@@ -3,10 +3,37 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
+@font-face {
+	font-family: "Lumos";
+	src: local("Lumos"), url("/public/Fonts/LUMOS.TTF") format("truetype");
+}
+@font-face {
+	font-family: "dum1";
+	src: local("HARRYP_"), url("/public/Fonts/dum1.ttf") format("truetype");
+}
+:root {
+	--font-family-body: "dum1", sans-serif;
+	--font-family-title: "Lumos", serif;
+}
 body {
 	height: 100%;
 	margin: 0;
+	font-family: var(--font-family-body);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-family-title);
+	}
+	cursor: url("/cursors/harry_potter_wand.cur"), auto;
+	.easyquest,
+	.mediumquest,
+	.expertquest {
+		cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_1482.png"),
+			auto;
+	}
 }
 
 #root {
@@ -15,4 +42,8 @@ body {
 
 main {
 	min-height: calc(100vh - 104px - 36px);
+	background-image: url("../../public/img/licorne_cw.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
