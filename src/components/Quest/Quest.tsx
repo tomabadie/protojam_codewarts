@@ -1,10 +1,10 @@
-//import PictureDiscover from "../PictureDiscover/PictureDiscover"
-import QuizWindow from "../Quiz_Window/QuizWindow.tsx";
+import PictureDiscover from "../PictureDiscover/PictureDiscover";
 
 const Quest = () => {
 	return (
 		<section className="quest-section">
-			<QuizWindow />
+			<PictureDiscover />
+			{/* <QuizWindow /> */}
 		</section>
 	);
 };

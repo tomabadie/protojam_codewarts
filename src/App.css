@@ -3,13 +3,37 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+@font-face {
+	font-family: "Lumos";
+	src: local("Lumos"), url("/public/Fonts/LUMOS.TTF") format("truetype");
+}
 
+:root {
+	--font-family-body: "", sans-serif;
+	--font-family-title: "Lumos", serif;
+}
 body {
-	font-size: 16px;
-	line-height: 1.7;
+	height: 100%;
 	margin: 0;
+	font-family: var(--font-family-body);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-family-title);
+	}
 }
 
 #root {
 	height: 100vh;
+}
+
+main {
+	min-height: calc(100vh - 104px - 36px);
+	background-image: url("../../public/img/licorne_cw.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }

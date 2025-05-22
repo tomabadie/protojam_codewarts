@@ -5,7 +5,7 @@ import App from "./App.tsx";
 
 import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
-
+import Error404 from "./components/Home/Error404.tsx";
 import Home from "./components/Home/Home.tsx";
 
 const router = createBrowserRouter([
@@ -23,6 +23,14 @@ const router = createBrowserRouter([
 			{
 				path: "/quest/:level",
 				element: <Quest />,
+			},
+			{
+				path: "/404",
+				element: <Error404 />,
+			},
+			{
+				path: "*",
+				element: <Error404 />,
 			},
 		],
 	},
