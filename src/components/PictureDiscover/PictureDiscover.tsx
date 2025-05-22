@@ -1,11 +1,10 @@
 import { useParams } from "react-router";
 import { secretImg } from "./pictureDiscoverData";
-import type { SecretImgProps } from "./pictureDiscoverType";
+import type { LevelProps, SecretImgProps } from "./pictureDiscoverType";
 import "./PictureDiscover.css"
 
 const PictureDiscover = () => {
   const { level } = useParams();
-  /* const [secretImg, setSecretImg] = useState(null); */
 
   const validateLevel = (lvl: string) => {
     return ["easy", "intermediate", "expert"].includes(lvl)
@@ -15,7 +14,7 @@ const PictureDiscover = () => {
     return <p>Tom Elvis Jedusor a encore tout cassé !</p>
   }
 
-  const lvlImg: SecretImgProps = secretImg[level];
+  const lvlImg: SecretImgProps = secretImg[level as LevelProps];
 
   return (
     <section className="picture-discover">
