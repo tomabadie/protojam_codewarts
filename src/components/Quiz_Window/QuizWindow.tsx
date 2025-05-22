@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type React from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import data from "../../../Data/data.json";
 import "./QuizWindow.css";
 
@@ -259,6 +259,5 @@ const QuizWindow = () => {
 		</div>
 	);
 };
-
 
 export default QuizWindow;
