@@ -4,19 +4,17 @@ import "./PictureDiscover.css";
 import { secretImg } from "./pictureDiscoverData";
 import type { LevelProps, SecretImgProps } from "./pictureDiscoverType";
 
-
-
 const generateFilterArray = () => {
   const randNumb = [];
   for (let i = 1; i <= 560; i++) {
     randNumb.push(i);
-  };
+  }
   for (let i = randNumb.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [randNumb[i], randNumb[j]] = [randNumb[j], randNumb[i]];
   }
   return randNumb;
-}
+};
 
 const generateFilterCoord = (arr: number[]) => {
   const coordMatrix: [number, number][][] = [];
@@ -27,18 +25,18 @@ const generateFilterCoord = (arr: number[]) => {
       if (col === 0) {
         col = 20;
       }
-      const row = 1 + (arr[i + 40 * j] - col) / 20
+      const row = 1 + (arr[i + 40 * j] - col) / 20;
       coordMatrix[j].push([row, col]);
     }
   }
   return coordMatrix;
-}
+};
 
 const generateRandomColor = () => {
   const r = Math.floor(Math.random() * 256);
   const g = Math.floor(Math.random() * 256);
   const b = Math.floor(Math.random() * 256);
-  return `rgb(${r},${g},${b})`
+  return `rgb(${r},${g},${b})`;
 };
 
 const PictureDiscover = () => {
