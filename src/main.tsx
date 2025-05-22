@@ -2,9 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App.tsx";
-import Home from "./components/Home/Home.tsx";
+
 import Quest from "./components/Quest/Quest.tsx";
 import "./index.css";
+
+import Home from "./components/Home/Home.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -16,6 +18,10 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/quest",
+				element: <Quest />,
+			},
+			{
+				path: "/quest/:level",
 				element: <Quest />,
 			},
 		],
