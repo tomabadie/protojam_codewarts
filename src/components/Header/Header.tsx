@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import logo from "../../assets/logo.png";
-import Navbar from "./Navbar";
-import "../../style/Header.css";
+import Navbar from "../NavBar/NavBar";
+import "./Header.css";
 
 const Header = () => {
 	return (

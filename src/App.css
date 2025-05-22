@@ -5,11 +5,11 @@
 }
 @font-face {
 	font-family: "Lumos";
-	src: local("Lumos"), url("/public/Fonts/LUMOS.TTF") format("truetype");
+	src: local("Lumos"), url("./assets/fonts/lumos.ttf") format("truetype");
 }
 @font-face {
 	font-family: "dum1";
-	src: local("HARRYP_"), url("/public/Fonts/dum1.ttf") format("truetype");
+	src: local("dum1"), url("./assets/fonts/dum1.ttf") format("truetype");
 }
 :root {
 	--font-family-body: "dum1", sans-serif;
@@ -42,7 +42,7 @@ body {
 
 main {
 	min-height: calc(100vh - 104px - 36px);
-	background-image: url("../../public/img/licorne_cw.png");
+	background-image: url("/img/licorne_cw.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "../NavQuest/navquest.css";
+import "./navquest.css";
 
 function Navquest() {
 	return (
