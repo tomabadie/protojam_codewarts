@@ -8,12 +8,12 @@ const Navbar = () => {
 				<div className="navbar-pages">
 					<ul>
 						<Link to="/">
-							<li>HOME</li>
+							<li>Accueil</li>
 						</Link>
 					</ul>
 					<ul>
 						<Link to="/Quest">
-							<li>QUEST</li>
+							<li>Sortilèges</li>
 						</Link>
 					</ul>
 				</div>

@@ -7,9 +7,12 @@
 	font-family: "Lumos";
 	src: local("Lumos"), url("/public/Fonts/LUMOS.TTF") format("truetype");
 }
-
+@font-face {
+	font-family: "dum1";
+	src: local("HARRYP_"), url("/public/Fonts/dum1.ttf") format("truetype");
+}
 :root {
-	--font-family-body: "", sans-serif;
+	--font-family-body: "dum1", sans-serif;
 	--font-family-title: "Lumos", serif;
 }
 body {
@@ -23,6 +26,13 @@ body {
 	h5,
 	h6 {
 		font-family: var(--font-family-title);
+	}
+	cursor: url("/cursors/harry_potter_wand.cur"), auto;
+	.easyquest,
+	.mediumquest,
+	.expertquest {
+		cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_1482.png"),
+			auto;
 	}
 }
 
