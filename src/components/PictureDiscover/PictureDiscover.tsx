@@ -49,7 +49,15 @@ const PictureDiscover = () => {
   };
 
   if (!level || !validateLevel(level)) {
-    return <p>Tom Elvis Jedusor a encore tout cassé !</p>;
+    return (
+      <h2 className="quest-error">
+        Tom Jedusor a encore tout cassé !
+        <br />
+        Choisis ton niveau
+        <br />
+        et tente un Reparo !
+      </h2>
+    );
   }
 
   const lvlImg: SecretImgProps = secretImg[level as LevelProps];
@@ -67,7 +75,7 @@ const PictureDiscover = () => {
 
   return (
     <section className="picture-discover">
-      <h2>Réussissez vos examens pour révéler l'image</h2>
+      <h2>Réussissez vos examens pour révéler l'identité d'un gardien du trésor !</h2>
       {level &&
         <div className="img-container">
           <img src={lvlImg.imgUrl} alt={lvlImg.name} className="secret-img" />

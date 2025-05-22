@@ -1,4 +1,9 @@
 .quest-section {
 	display: flex;
 	justify-content: space-around;
+
+	.quiz-container {
+		width: calc(100vw * 3 / 4);
+		max-width: 900px;
+	}
 }
