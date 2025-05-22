@@ -128,7 +128,6 @@ h4 {
 	margin-right: 0.5rem;
 }
 
-
 .expand-bar {
 	position: absolute;
 	right: 0.5rem;
@@ -145,7 +144,7 @@ h4 {
 }
 
 .expand-bar::before {
-	content: '+';
+	content: "+";
 	display: block;
 }
 
