@@ -21,6 +21,10 @@ const router = createBrowserRouter([
 				element: <Quest />,
 			},
 			{
+				path: "/quest/:level",
+				element: <Quest />,
+			},
+			{
 				path: "/404",
 				element: <Error404 />,
 			},

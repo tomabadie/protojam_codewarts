@@ -1,5 +1,12 @@
-const Quest = () => {
-	return <p>Quest</p>;
-};
+import PictureDiscover from "../PictureDiscover/PictureDiscover"
 
-export default Quest;
+const Quest = () => {
+  return (
+    <section className="quest-section">
+      <PictureDiscover />
+      {/* <QuizWindow /> */}
+    </section>
+  )
+}
+
+export default Quest
