@@ -1,14 +1,17 @@
 .footer {
 	margin-top: auto;
+	padding: 20px;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	align-items: center;
 	width: 100%;
+	background-color: #181818;
 }
 
 .logo {
 	display: flex;
 	gap: 30px;
 	list-style: none;
+	align-items: center;
 }

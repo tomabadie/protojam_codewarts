@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import "./Home.css";
+import oeuf from "../../assets/oeuf.png";
 
 function Home() {
 	return (
@@ -36,6 +37,10 @@ function Home() {
 				<button className="home-btn" type="button">
 					Lance le Sort !
 				</button>
+			</Link>
+
+			<Link to="/easter-egg">
+				<img src={oeuf} alt="Easter Egg" className="oeuf" />
 			</Link>
 		</section>
 	);

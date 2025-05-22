@@ -70,3 +70,11 @@
 		box-shadow: 0px 0px 15px #ffd700;
 	}
 }
+
+.oeuf {
+	display: flex;
+	position: absolute;
+	width: 32px;
+	right: 84%;
+	bottom: 65%;
+}
