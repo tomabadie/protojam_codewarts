@@ -1,5 +1,4 @@
-.footer {
-	margin-top: auto;
+footer {
 	padding: 20px;
 	display: flex;
 	justify-content: center;
@@ -7,11 +6,11 @@
 	align-items: center;
 	width: 100%;
 	background-color: #181818;
-}
 
-.logo {
-	display: flex;
-	gap: 30px;
-	list-style: none;
-	align-items: center;
+	.logo-list {
+		display: flex;
+		gap: 30px;
+		list-style: none;
+		align-items: center;
+	}
 }
