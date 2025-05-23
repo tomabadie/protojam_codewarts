@@ -7,3 +7,4 @@ export default defineConfig({
 //	base: "/protojam_codewarts",
 
 });
+
