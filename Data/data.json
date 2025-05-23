@@ -222,7 +222,7 @@
 					{
 						"title": "6eme année",
 						"question": "Quelle méthode permet de diviser une chaîne de caractères en un tableau de sous-chaînes ? string._____(',');",
-						"choices": ["concat", "join", "spit", "slice"],
+						"choices": ["concat", "join", "split", "slice"],
 						"answer": "split",
 						"code": "b13"
 					},
