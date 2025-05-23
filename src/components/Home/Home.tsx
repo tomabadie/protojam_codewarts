@@ -33,7 +33,7 @@ function Home() {
 				commencer l'aventure !
 			</p>
 
-			<Link to="/quest/easy">
+			<Link to="/quest">
 				<button className="home-btn" type="button">
 					Lance le Sort !
 				</button>
