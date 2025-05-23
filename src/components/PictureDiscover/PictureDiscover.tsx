@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
 import "./PictureDiscover.css";
 import { secretImg } from "./pictureDiscoverData";
 import type { LevelProps, PictureDiscoverProps, SecretImgProps } from "./pictureDiscoverType";
@@ -39,65 +38,60 @@ const generateRandomColor = () => {
   return `rgb(${r},${g},${b})`;
 };
 
-const PictureDiscover = ({ activeIndex }: PictureDiscoverProps) => {
-  const { level } = useParams();
-
+const PictureDiscover = ({ level, answered }: PictureDiscoverProps) => {
   const validateLevel = (lvl: string) => {
     return ["easy", "intermediate", "expert"].includes(lvl);
   };
 
   if (!level || !validateLevel(level)) {
     return (
-      <h2 className="quest-error">
-        Tom Jedusor a encore tout cassé !
-        <br />
-        Choisis ton niveau
-        <br />
-        et tente un Reparo !
-      </h2>
+        <h2 className="quest-error">
+          Tom Jedusor a encore tout cassé !
+          <br />
+          Choisis ton niveau
+          <br />
+          et tente un Reparo !
+        </h2>
     );
   }
 
   const lvlImg: SecretImgProps = secretImg[level as LevelProps];
-
   const [filterCoords, setFilterCoords] = useState<[number, number][][]>([]);
   const [groupColors, setGroupColors] = useState<string[]>();
 
   useEffect(() => {
     const coords = generateFilterCoord(generateFilterArray());
     setFilterCoords(coords);
-
     const colors = coords.map(() => generateRandomColor());
     setGroupColors(colors);
   }, []);
 
+  const revealedCount = Object.keys(answered).filter((key) => answered[+key]).length;
+
   return (
-    <section className="picture-discover">
-      <h2>Réussissez vos examens pour révéler l'identité d'un gardien du trésor !</h2>
-      {level &&
-        <div className="img-container">
-          <img src={lvlImg.imgUrl} alt={lvlImg.name} className="secret-img" />
-          {
-            filterCoords.length > 0 && groupColors && filterCoords.map((group: [number, number][], groupIndex: number) => {
-              return (
-                group.map((coord: [number, number]) => {
-                  return (
-                    <div
-                      className={`filter-${groupIndex + 1} ${(groupIndex) < activeIndex && "revealed-group"}`}
-                      key={`${coord[0]}-${coord[1]}`}
-                      style={{
-                        gridRow: coord[0],
-                        gridColumn: coord[1],
-                        backgroundColor: groupColors[groupIndex],
-                      }}
-                    />)
-                }))
-            })
-          }
-        </div>
-      }
-    </section>
-  )
-}
+      <section className="picture-discover">
+        <h2>Réussissez vos examens pour révéler l'identité d'un gardien du trésor !</h2>
+        {level && (
+            <div className="img-container">
+              <img src={lvlImg.imgUrl} alt={lvlImg.name} className="secret-img" />
+              {filterCoords.length > 0 && groupColors &&
+                  filterCoords.map((group: [number, number][], groupIndex: number) => (
+                      group.map((coord: [number, number]) => (
+                          <div
+                              className={`filter-${groupIndex + 1} ${groupIndex < revealedCount ? "revealed-group" : ""}`}
+                              key={`${coord[0]}-${coord[1]}`}
+                              style={{
+                                gridRow: coord[0],
+                                gridColumn: coord[1],
+                                backgroundColor: groupColors[groupIndex],
+                              }}
+                          />
+                      ))
+                  ))}
+            </div>
+        )}
+      </section>
+  );
+};
 
 export default PictureDiscover;

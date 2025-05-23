@@ -16,28 +16,29 @@ interface Section {
 	description: string;
 	questions: Question[];
 }
+
 interface QuizWindowProps {
 	activeIndex: number;
 	setActiveIndex: (value: number) => void;
+	setAnsweredByLevel: React.Dispatch<React.SetStateAction<Record<string, Record<number, boolean>>>>;
 }
 
-const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
+const QuizWindow = ({ activeIndex, setActiveIndex, setAnsweredByLevel }: QuizWindowProps) => {
 	const { level } = useParams() as { level: keyof typeof data.levels };
 	const [sections, setSections] = useState<[string, Section][]>([]);
-	const [answered, setAnswered] = useState<Record<number, boolean>>({});
-	const [codes, setCodes] = useState<Record<number, string>>({});
-	const [selectedChoices, setSelectedChoices] = useState<
-		Record<number, string[]>
-	>({});
-	const [revealed, setRevealed] = useState<Record<number, boolean>>({});
+	const [codes, setCodes] = useState<Record<string, Record<number, string>>>({});
+	const [selectedChoices, setSelectedChoices] = useState<Record<string, Record<number, string[]>>>({});
+	const [revealed, setRevealed] = useState<Record<string, Record<number, boolean>>>({});
+	const [answered, setAnswered] = useState<Record<string, Record<number, boolean>>>({});
 
 	useEffect(() => {
 		if (level && data.levels[level]) {
-			const loadedSections = Object.entries(data.levels[level]) as [
-				string,
-				Section,
-			][];
+			const loadedSections = Object.entries(data.levels[level]) as [string, Section][];
 			setSections(loadedSections);
+			setRevealed((prev) => ({ ...prev, [level]: prev[level] || {} }));
+			setCodes((prev) => ({ ...prev, [level]: prev[level] || {} }));
+			setSelectedChoices((prev) => ({ ...prev, [level]: prev[level] || {} }));
+			setAnswered((prev) => ({ ...prev, [level]: prev[level] || {} }));
 		}
 	}, [level]);
 
@@ -60,38 +61,57 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 	};
 
 	const autoValidateUntil = (index: number) => {
+		if (!level) return;
 		const newAnswered: Record<number, boolean> = {};
 		const newRevealed: Record<number, boolean> = {};
 		for (let i = 0; i <= index; i++) {
 			newAnswered[i] = true;
 			newRevealed[i] = true;
 		}
-		setAnswered((prev) => ({ ...prev, ...newAnswered }));
-		setRevealed((prev) => ({ ...prev, ...newRevealed }));
+		setAnsweredByLevel((prev) => ({ ...prev, [level]: { ...prev[level], ...newAnswered } }));
+		setRevealed((prev) => ({ ...prev, [level]: { ...prev[level], ...newRevealed } }));
+		setAnswered((prev) => ({ ...prev, [level]: { ...prev[level], ...newAnswered } }));
 	};
 
 	const handleAnswer = (choice: string, index: number) => {
-		if (answered[index]) return;
+		if (!level || answered[level]?.[index]) return;
 		setSelectedChoices((prev) => ({
 			...prev,
-			[index]: [...(prev[index] || []), choice],
+			[level]: {
+				...(prev[level] || {}),
+				[index]: [...(prev[level]?.[index] || []), choice],
+			},
 		}));
 
 		const result = getQuestionByIndex(index);
 		if (!result) return;
 
 		if (choice === result.question.answer) {
-			setAnswered((prev) => ({ ...prev, [index]: true }));
-			setCodes((prev) => ({ ...prev, [index]: result.question.code }));
-			setRevealed((prev) => ({ ...prev, [index]: true }));
+			setAnsweredByLevel((prev) => ({
+				...prev,
+				[level]: { ...(prev[level] || {}), [index]: true },
+			}));
+			setAnswered((prev) => ({ ...prev, [level]: { ...prev[level], [index]: true } }));
+			setCodes((prev) => ({
+				...prev,
+				[level]: { ...(prev[level] || {}), [index]: result.question.code },
+			}));
+			setRevealed((prev) => ({
+				...prev,
+				[level]: { ...(prev[level] || {}), [index]: true },
+			}));
 		}
 	};
 
 	const handleCodeInput = (index: number, value: string) => {
+		if (!level) return;
 		const result = getQuestionByIndex(index);
 		if (!result) return;
 
-		setCodes((prev) => ({ ...prev, [index]: value }));
+		setCodes((prev) => ({
+			...prev,
+			[level]: { ...(prev[level] || {}), [index]: value },
+		}));
 
 		if (value === result.question.code) {
 			autoValidateUntil(index);
@@ -100,13 +120,11 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 	};
 
 	const handleNext = (index: number) => {
-		if (answered[index]) setActiveIndex(index + 1);
+		if (!level) return;
+		if (answered[level]?.[index]) setActiveIndex(index + 1);
 	};
 
-	const renderFormattedQuestion = (
-		question: string,
-		answer?: string,
-	): React.ReactNode[] => {
+	const renderFormattedQuestion = (question: string, answer?: string): React.ReactNode[] => {
 		const parts = question.split("_____");
 		const displayValue = answer ? (
 			<strong style={{ textDecoration: "underline" }}>{answer}</strong>
@@ -118,7 +136,7 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 			const items = [<span key={`part-${i}-${part}`}>{part}</span>];
 			if (i < parts.length - 1) {
 				items.push(
-					<span key={`answer-${i}-${answer || "blank"}`}>{displayValue}</span>,
+					<span key={`answer-${i}-${answer || "blank"}`}>{displayValue}</span>
 				);
 			}
 			return items;
@@ -133,7 +151,6 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 						<h3>{sectionName.toUpperCase()}</h3>
 						<p>{section.description}</p>
 					</div>
-
 					{section.questions.map((_, questionIndex) => {
 						const globalIndex = sectionIndex * 7 + questionIndex;
 						const result = getQuestionByIndex(globalIndex);
@@ -141,7 +158,7 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 
 						const { question } = result;
 						const isActive = globalIndex === activeIndex;
-						const isAnswered = answered[globalIndex];
+						const isAnswered = answered[level]?.[globalIndex];
 						const displayAnswer = isAnswered ? question.answer : undefined;
 
 						return (
@@ -152,20 +169,14 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 								{isActive ? (
 									<>
 										<h4>{question.title}</h4>
-										<p>
-											{renderFormattedQuestion(
-												question.question,
-												displayAnswer,
-											)}
-										</p>
+										<p>{renderFormattedQuestion(question.question, displayAnswer)}</p>
 										<div className="choices">
 											{question.choices.map((choice) => {
 												const isCorrect = choice === question.answer;
 												const isWrong =
-													selectedChoices[globalIndex]?.includes(choice) &&
-													!isCorrect;
+													selectedChoices[level]?.[globalIndex]?.includes(choice) && !isCorrect;
 												const choiceClass =
-													isAnswered && revealed[globalIndex]
+													isAnswered && revealed[level]?.[globalIndex]
 														? isCorrect
 															? "correct"
 															: "wrong"
@@ -191,12 +202,15 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 											<input
 												className="code-input"
 												type="text"
-												value={codes[globalIndex] || ""}
+												value={codes[level]?.[globalIndex] || ""}
 												readOnly={isAnswered}
 												onChange={(e) =>
 													setCodes((prev) => ({
 														...prev,
-														[globalIndex]: e.target.value,
+														[level]: {
+															...(prev[level] || {}),
+															[globalIndex]: e.target.value,
+														},
 													}))
 												}
 											/>
@@ -218,15 +232,12 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 											role="button"
 											tabIndex={0}
 											onClick={() => {
-												if (answered[globalIndex]) {
+												if (answered[level]?.[globalIndex]) {
 													setActiveIndex(globalIndex);
 												}
 											}}
 											onKeyDown={(e) => {
-												if (
-													(e.key === "Enter" || e.key === " ") &&
-													answered[globalIndex]
-												) {
+												if ((e.key === "Enter" || e.key === " ") && answered[level]?.[globalIndex]) {
 													setActiveIndex(globalIndex);
 												}
 											}}
@@ -235,20 +246,21 @@ const QuizWindow = ({ activeIndex, setActiveIndex }: QuizWindowProps) => {
 											className="code-input"
 											type="text"
 											placeholder="Code..."
-											value={codes[globalIndex] || ""}
+											value={codes[level]?.[globalIndex] || ""}
 											onChange={(e) =>
 												setCodes((prev) => ({
 													...prev,
-													[globalIndex]: e.target.value,
+													[level]: {
+														...(prev[level] || {}),
+														[globalIndex]: e.target.value,
+													},
 												}))
 											}
 										/>
 										<button
 											type="button"
 											className="next-btn"
-											onClick={() =>
-												handleCodeInput(globalIndex, codes[globalIndex] || "")
-											}
+											onClick={() => handleCodeInput(globalIndex, codes[level]?.[globalIndex] || "")}
 										>
 											Go
 										</button>

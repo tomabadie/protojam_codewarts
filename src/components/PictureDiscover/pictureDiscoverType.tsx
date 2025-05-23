@@ -5,7 +5,8 @@ export interface SecretImgProps {
 	imgUrl: string;
 }
 
-
 export interface PictureDiscoverProps {
 	activeIndex: number;
+	level: string;
+	answered: Record<number, boolean>;
 }
