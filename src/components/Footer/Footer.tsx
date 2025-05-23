@@ -1,14 +1,14 @@
+import github from "../../assets/github.png";
 import instagram from "../../assets/instagram.png";
 import twitter from "../../assets/twitter.png";
 import youtube from "../../assets/youtube.png";
-import github from "../../assets/github.png";
 import "../Footer/Footer.css";
 
 const Footer = () => {
 	return (
 		<>
-			<div className="footer">
-				<ul className="logo">
+			<footer>
+				<ul className="logo-list">
 					<li className="logo-instagram">
 						<a href="https://www.instagram.com/wildcodeschoolofficial/?hl=fr">
 							<img src={instagram} alt="logo d'instagram" />
@@ -30,7 +30,7 @@ const Footer = () => {
 						</a>
 					</li>
 				</ul>
-			</div>
+			</footer>
 		</>
 	);
 };
