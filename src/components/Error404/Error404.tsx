@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
-import looser from "../../assets/404Loosers.png";
+import looser from "../../assets/img/404Loosers.png";
 import "./Error404.css";
 
 const Error404 = () => {
