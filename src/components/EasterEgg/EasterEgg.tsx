@@ -9,9 +9,9 @@ function EasterEgg() {
 			<h1>Bravo vous avez trouvé la caverne secrète !</h1>
 
 			<div className="img-easter">
-				<img src={ayoub} alt="" />
-				<img src={nicolas} alt="" />
-				<img src={yavuz} alt="" />
+				<img src={ayoub} alt="ayoub" />
+				<img src={nicolas} alt="nicolas" />
+				<img src={yavuz} alt="yavuz" />
 			</div>
 		</section>
 	);
