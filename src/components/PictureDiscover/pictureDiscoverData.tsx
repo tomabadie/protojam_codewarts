@@ -1,16 +1,20 @@
 import type { LevelProps, SecretImgProps } from "./pictureDiscoverType";
 
+import yavuz from "../../assets/img/yavuz.png";
+import ayoub from "../../assets/img/ayoub.png";
+import nicolas from "../../assets/img/nicolas.png";
+
 export const secretImg: Record<LevelProps, SecretImgProps> = {
 	easy: {
 		name: "easy secret image",
-		imgUrl: "/src/assets/img/yavuz.png",
+		imgUrl: yavuz,
 	},
 	intermediate: {
 		name: "intermediate secret image",
-		imgUrl: "/src/assets/img/ayoub.png",
+		imgUrl: ayoub,
 	},
 	expert: {
 		name: "expert secret image",
-		imgUrl: "/src/assets/img/nicolas.png",
+		imgUrl: nicolas,
 	},
 };
