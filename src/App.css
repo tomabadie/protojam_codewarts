@@ -30,7 +30,8 @@ body {
 	cursor: url("/cursors/harry_potter_wand.cur"), auto;
 	.easyquest,
 	.mediumquest,
-	.expertquest {
+	.expertquest,
+	.resetquest {
 		cursor: url("https://cdn.custom-cursor.com/db/cursor/pointer_1482.png"),
 			auto;
 	}
