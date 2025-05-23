@@ -30,7 +30,7 @@
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
 		grid-template-rows: repeat(28, 1fr);
-		animation: magic-glow 2s infinite alternate;
+		animation: magic-glow-secret 2s infinite alternate;
 
 		.secret-img {
 			height: 100%;
@@ -67,7 +67,7 @@
 	}
 }
 
-@keyframes magic-glow {
+@keyframes magic-glow-secret {
 	0% {
 		box-shadow: 0px 0px 5px #fff;
 	}
@@ -79,7 +79,7 @@
 	}
 }
 
-@keyframes magic-glow {
+@keyframes magic-glow-secret {
 	0% {
 		box-shadow: 0px 0px 5px #fff;
 	}

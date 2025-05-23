@@ -37,7 +37,7 @@
 	color: #ffd700;
 	cursor: pointer;
 	transition: 0.3s;
-	animation: magic-glow 2s infinite alternate;
+	animation: magic-glow-navquest 2s infinite alternate;
 }
 
 .easyquest:hover,
@@ -62,7 +62,7 @@
 	color: #00ffff;
 	cursor: pointer;
 	transition: 0.3s;
-	animation: magic-glow 2s infinite alternate;
+	animation: magic-glow-navquest 2s infinite alternate;
 }
 
 .resetquest:hover {
@@ -70,7 +70,7 @@
 	box-shadow: 0px 0px 15px #00ffff;
 }
 
-@keyframes magic-glow {
+@keyframes magic-glow-navquest {
 	0% {
 		box-shadow: 0px 0px 5px currentColor;
 	}
