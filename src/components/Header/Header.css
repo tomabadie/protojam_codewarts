@@ -2,9 +2,9 @@
 	display: flex;
 	justify-content: space-between;
 	background-color: #181818;
-}
-
-.logo-1 img {
-	width: 100px;
-	height: auto;
+	height: 60px;
+	.logo-1 img {
+		width: 85px;
+		height: 60px;
+	}
 }

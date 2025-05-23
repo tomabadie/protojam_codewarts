@@ -6,6 +6,7 @@ footer {
 	align-items: center;
 	width: 100%;
 	background-color: #181818;
+	height: 60px;
 
 	.logo-list {
 		display: flex;
