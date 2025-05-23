@@ -1,6 +1,6 @@
-import ayoub from "../../../public/img/ayoub.png";
-import yavuz from "../../../public/img/yavuz.png";
-import nicolas from "../../../public/img/nicolas.png";
+import ayoub from "../../assets/img/ayoub.png";
+import yavuz from "../../assets/img/yavuz.png";
+import nicolas from "../../assets/img/nicolas.png";
 import "./EasterEgg.css";
 
 function EasterEgg() {
