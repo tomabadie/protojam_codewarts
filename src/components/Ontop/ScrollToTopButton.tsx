@@ -1,4 +1,5 @@
 import "./ScrollToTopButton.css";
+import broomIcon from "../../assets/img/witch-broom.png";
 
 const ScrollToTopButton = () => {
     const scrollToTop = () => {
@@ -12,7 +13,7 @@ const ScrollToTopButton = () => {
             aria-label="Retour en haut"
             type="button"
         >
-            <img src="/src/assets/img/witch-broom.png" alt="Sorcière sur balai" />
+            <img src={broomIcon} alt="Sorcière sur balai" />
         </button>
     );
 };
