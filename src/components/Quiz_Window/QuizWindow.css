@@ -93,9 +93,11 @@ h4 {
 	align-items: center;
 	gap: 1rem;
 	margin-top: 1rem;
+
+	@media screen and (width <= 500px) {
+		flex-direction: column;
+	}
 }
-
-
 
 .code-input {
 	width: 200px;
@@ -137,7 +139,7 @@ h4 {
 }
 
 .expand-bar {
-	position: absolute;
+	/* position: absolute; */
 	right: 0.5rem;
 	height: 36px;
 	width: 36px;
@@ -149,6 +151,7 @@ h4 {
 	border-radius: 6px;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	order: 5;
 }
 
 .expand-bar::before {

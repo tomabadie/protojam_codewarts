@@ -5,5 +5,14 @@
 	.quiz-container {
 		width: calc(100vw * 3 / 4);
 		max-width: 900px;
+
+		@media screen and (width <= 900px) {
+			width: auto;
+		}
+	}
+
+	@media screen and (width <= 900px) {
+		flex-direction: column;
+		align-items: center;
 	}
 }
