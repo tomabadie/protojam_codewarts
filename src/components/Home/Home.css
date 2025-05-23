@@ -3,61 +3,66 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 40px 0;
-}
 
-.home-section h1 {
-	padding: 20px;
-	color: white;
-	font-size: 3rem;
-}
+	h1 {
+		padding: 20px;
+		color: white;
+		font-size: 3rem;
+		text-align: center;
+	}
 
-.home-section p {
-	font-size: 1.7rem;
-	width: 700px;
-	padding: 20px 35px;
-	border-radius: 4px;
-	background-color: rgba(0, 0, 0, 0.201);
-	color: rgb(255, 255, 255);
-}
+	p {
+		font-size: 1.7rem;
+		width: 700px;
+		padding: 20px 35px;
+		border-radius: 4px;
+		background-color: rgba(0, 0, 0, 0.201);
+		color: rgb(255, 255, 255);
 
-.home-btn {
-	padding: 20px 40px;
-	margin-top: 40px;
-	font-size: 22px;
-	font-family: var(--font-family-body);
-	border-radius: 16px;
-	background-color: #4b0082;
-	color: rgb(255, 255, 255);
-	cursor: pointer;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	border: 2px solid #ffd700;
-	position: relative;
-	overflow: hidden;
-	transition: all 0.3s ease-in-out;
-}
+		@media screen and (width <= 750px) {
+			width: 90%;
+		}
+	}
 
-.home-btn::before {
-	content: "";
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	right: -2px;
-	bottom: -2px;
-	border-radius: 18px;
-	border: 2px solid #ffd700;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}
+	.home-btn {
+		padding: 20px 40px;
+		margin-top: 40px;
+		font-size: 22px;
+		font-family: var(--font-family-body);
+		border-radius: 16px;
+		background-color: #4b0082;
+		color: rgb(255, 255, 255);
+		cursor: pointer;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		border: 2px solid #ffd700;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.3s ease-in-out;
 
-.home-btn:hover {
-	background-color: #6435a6;
-	box-shadow: 0 0 20px #ffd700;
-}
+		&::before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			border-radius: 18px;
+			border: 2px solid #ffd700;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
 
-.home-btn:hover::before {
-	opacity: 1;
-	animation: glow 1.5s infinite alternate;
+		&:hover {
+			background-color: #6435a6;
+			box-shadow: 0 0 20px #ffd700;
+		}
+
+		&:hover::before {
+			opacity: 1;
+			animation: glow 1.5s infinite alternate;
+		}
+	}
 }
 
 @keyframes glow {
