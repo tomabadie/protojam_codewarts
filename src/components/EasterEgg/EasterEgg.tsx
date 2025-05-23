@@ -6,7 +6,7 @@ import "./EasterEgg.css";
 function EasterEgg() {
 	return (
 		<section className="easter-egg">
-			<h1>Bravo vous avez trouver la caverne secrete !</h1>
+			<h1>Bravo vous avez trouvé la caverne secrete !</h1>
 
 			<div className="img-easter">
 				<img src={ayoub} alt="" />
