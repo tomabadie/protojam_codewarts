@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navquest from "../NavQuest/Navquest";
 import PictureDiscover from "../PictureDiscover/PictureDiscover";
 import QuizWindow from "../Quiz_Window/QuizWindow";
+import ScrollToTopButton from "../Ontop/ScrollToTopButton";
 import "./Quest.css";
 
 const Quest = () => {
@@ -50,6 +51,7 @@ const Quest = () => {
 					answered={answeredByLevel[level] || {}}
 				/>
 			</div>
+			<ScrollToTopButton />
 		</section>
 	);
 };
