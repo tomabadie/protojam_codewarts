@@ -12,7 +12,7 @@ const Navbar = () => {
 						</Link>
 					</ul>
 					<ul>
-						<Link to="/quest/easy">
+						<Link to="/quest/">
 							<li>Sortilèges</li>
 						</Link>
 					</ul>
