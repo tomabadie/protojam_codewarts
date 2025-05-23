@@ -2,14 +2,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #18181880;
 	height: 100vh;
+	width: 100vw;
 }
 
 .img-404 img {
-	height: 80%;
-	width: 80%;
+	height: 100%;
+	width: 100%;
 	object-fit: cover;
-	margin-top: 30px;
-	border: solid 5px rgba(218, 165, 32, 0.678);
 }
