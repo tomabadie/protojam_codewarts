@@ -12,7 +12,7 @@ const ScrollToTopButton = () => {
             aria-label="Retour en haut"
             type="button"
         >
-            <img src="../../../public/witch-broom.png" alt="Sorcière sur balai" />
+            <img src="/src/assets/img/witch-broom.png" alt="Sorcière sur balai" />
         </button>
     );
 };
