@@ -9,7 +9,7 @@ const Error404 = () => {
 	useEffect(() => {
 		setTimeout(() => {
 			navigate("/");
-		}, 10000);
+		}, 5000);
 	});
 
 	return (
